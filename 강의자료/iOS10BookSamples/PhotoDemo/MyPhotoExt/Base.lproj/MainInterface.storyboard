@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Editing View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="PhotoEditingViewController" customModule="MyPhotoExt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgR-fA-3ID">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NXn-Wc-ytn"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Sepia" id="tlo-wL-aUS">
+                                        <connections>
+                                            <action selector="sepiaSelected:" destination="ObA-dk-sSI" id="zDX-zn-2ww"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Mono" id="MxS-ud-VKT">
+                                        <connections>
+                                            <action selector="monoSelected:" destination="ObA-dk-sSI" id="sR1-Yw-rjf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Invert" id="RfX-I2-NYy">
+                                        <connections>
+                                            <action selector="invertSelected:" destination="ObA-dk-sSI" id="m9v-8K-5Mc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2i-ZH-B9c"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v2i-ZH-B9c" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="9LF-qa-jHB"/>
+                            <constraint firstItem="v2i-ZH-B9c" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="GvE-05-h3o"/>
+                            <constraint firstItem="PgR-fA-3ID" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="WKq-jX-75C"/>
+                            <constraint firstAttribute="trailing" secondItem="PgR-fA-3ID" secondAttribute="trailing" id="i7q-TF-WVP"/>
+                            <constraint firstAttribute="trailing" secondItem="v2i-ZH-B9c" secondAttribute="trailing" id="jBz-ci-Qc7"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="PgR-fA-3ID" secondAttribute="bottom" id="uga-16-S6f"/>
+                            <constraint firstItem="PgR-fA-3ID" firstAttribute="top" secondItem="v2i-ZH-B9c" secondAttribute="bottom" id="y3m-zx-2wz"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="imageView" destination="v2i-ZH-B9c" id="Z3c-DA-oZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
+        </scene>
+    </scenes>
+</document>

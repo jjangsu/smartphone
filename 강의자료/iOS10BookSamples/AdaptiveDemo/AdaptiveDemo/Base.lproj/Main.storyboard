@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdaptiveDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Sunset Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytl-A8-2wB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sunset" translatesAutoresizingMaskIntoConstraints="NO" id="6ER-V9-BmM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="ENP-YA-SkC">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="6ER-V9-BmM" secondAttribute="height" multiplier="343:241" id="u9N-53-3as"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTf-I2-8T0">
+                                <state key="normal" title="Edit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eTf-I2-8T0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cy-FU-79o"/>
+                            <constraint firstItem="6ER-V9-BmM" firstAttribute="top" secondItem="ytl-A8-2wB" secondAttribute="bottom" constant="23" id="77q-pf-lPg"/>
+                            <constraint firstItem="ytl-A8-2wB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DTg-kq-g1x"/>
+                            <constraint firstItem="eTf-I2-8T0" firstAttribute="top" secondItem="6ER-V9-BmM" secondAttribute="bottom" constant="44.5" id="Rfd-xm-M8S"/>
+                            <constraint firstItem="6ER-V9-BmM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vra-Yv-UE6"/>
+                            <constraint firstItem="ytl-A8-2wB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="ygD-vF-zqr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eTf-I2-8T0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6cy-FU-79o"/>
+                                <exclude reference="Rfd-xm-M8S"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="eTf-I2-8T0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6cy-FU-79o"/>
+                                <include reference="Rfd-xm-M8S"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Sunset" width="960" height="640"/>
+    </resources>
+</document>

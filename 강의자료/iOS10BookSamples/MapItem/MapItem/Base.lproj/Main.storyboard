@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapItem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0H-LC-h1u">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9F-RE-UbR">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fh0-gL-lis">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-LZ-ZLT">
+                                <state key="normal" title="Get Directions"/>
+                                <connections>
+                                    <action selector="getDirections:" destination="BYZ-38-t0r" eventType="touchUpInside" id="du5-SI-fpz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AIt-Vk-MfD">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k9F-RE-UbR" firstAttribute="leading" secondItem="fh0-gL-lis" secondAttribute="leading" id="0f6-pJ-s6D"/>
+                            <constraint firstItem="e0H-LC-h1u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Mk-uz-9gj"/>
+                            <constraint firstItem="e0H-LC-h1u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="7cc-6F-cbn"/>
+                            <constraint firstItem="fh0-gL-lis" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N20-yh-TBv"/>
+                            <constraint firstItem="4a9-LZ-ZLT" firstAttribute="top" secondItem="AIt-Vk-MfD" secondAttribute="bottom" constant="28" id="Oye-Gc-q47"/>
+                            <constraint firstItem="fh0-gL-lis" firstAttribute="leading" secondItem="AIt-Vk-MfD" secondAttribute="leading" id="W8k-jV-55R"/>
+                            <constraint firstItem="AIt-Vk-MfD" firstAttribute="top" secondItem="fh0-gL-lis" secondAttribute="bottom" constant="8" symbolic="YES" id="WKx-Mw-gFV"/>
+                            <constraint firstItem="e0H-LC-h1u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="Yhs-qf-JIx"/>
+                            <constraint firstItem="e0H-LC-h1u" firstAttribute="leading" secondItem="k9F-RE-UbR" secondAttribute="leading" id="pia-9l-DJT"/>
+                            <constraint firstItem="fh0-gL-lis" firstAttribute="top" secondItem="k9F-RE-UbR" secondAttribute="bottom" constant="8" symbolic="YES" id="pii-4R-213"/>
+                            <constraint firstItem="k9F-RE-UbR" firstAttribute="top" secondItem="e0H-LC-h1u" secondAttribute="bottom" constant="8" symbolic="YES" id="q8H-R9-dQu"/>
+                            <constraint firstItem="AIt-Vk-MfD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sp0-0u-FKX"/>
+                            <constraint firstItem="4a9-LZ-ZLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xQC-6E-s7b"/>
+                            <constraint firstItem="k9F-RE-UbR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLm-oi-x2w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="e0H-LC-h1u" id="Olq-zp-G03"/>
+                        <outlet property="city" destination="k9F-RE-UbR" id="GMW-Tw-n9N"/>
+                        <outlet property="state" destination="fh0-gL-lis" id="8dx-hE-Sw9"/>
+                        <outlet property="zip" destination="AIt-Vk-MfD" id="Yha-QY-IhZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="142"/>
+        </scene>
+    </scenes>
+</document>

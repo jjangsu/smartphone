@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKa-vR-fn8">
+                                <items>
+                                    <barButtonItem title="Select Image" id="Zgv-JU-w4d">
+                                        <connections>
+                                            <action selector="selectImage:" destination="BYZ-38-t0r" id="huH-ko-FNq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Post Message" id="6kW-2r-Vsi">
+                                        <connections>
+                                            <action selector="sendPost:" destination="BYZ-38-t0r" id="eUI-Tg-7Ik"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WVa-1n-CEJ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqy-CO-LGR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="337" id="l42-wW-Frs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WVa-1n-CEJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Av-RU-gGR"/>
+                            <constraint firstItem="aKa-vR-fn8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BaX-ba-RBf"/>
+                            <constraint firstItem="yqy-CO-LGR" firstAttribute="top" secondItem="WVa-1n-CEJ" secondAttribute="bottom" constant="11" id="NLA-ZW-WUV"/>
+                            <constraint firstItem="WVa-1n-CEJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SEg-43-4V6"/>
+                            <constraint firstItem="aKa-vR-fn8" firstAttribute="top" secondItem="yqy-CO-LGR" secondAttribute="bottom" constant="17" id="XAE-M6-gOv"/>
+                            <constraint firstItem="yqy-CO-LGR" firstAttribute="top" secondItem="WVa-1n-CEJ" secondAttribute="bottom" constant="11" id="hFr-YT-kgZ"/>
+                            <constraint firstItem="WVa-1n-CEJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iW4-ra-cda"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aKa-vR-fn8" secondAttribute="bottom" id="msQ-5L-a2A"/>
+                            <constraint firstItem="yqy-CO-LGR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wrC-7g-vyJ"/>
+                            <constraint firstItem="yqy-CO-LGR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xX2-W5-mhy"/>
+                            <constraint firstAttribute="trailing" secondItem="aKa-vR-fn8" secondAttribute="trailing" id="yyf-7t-XqY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postImage" destination="yqy-CO-LGR" id="PlB-in-Omt"/>
+                        <outlet property="postText" destination="WVa-1n-CEJ" id="7eb-pE-uYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="-60.719640179910051"/>
+        </scene>
+    </scenes>
+</document>

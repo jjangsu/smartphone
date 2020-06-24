@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrossView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-BA-Y1G">
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-Fl-bIK">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-wm-Kmv">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jmz-wm-Kmv" firstAttribute="centerY" secondItem="OFs-Fl-bIK" secondAttribute="centerY" id="lly-vw-KDj"/>
+                                    <constraint firstItem="jmz-wm-Kmv" firstAttribute="centerX" secondItem="OFs-Fl-bIK" secondAttribute="centerX" id="tSd-zK-9h8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="OFs-Fl-bIK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="16N-qM-rim"/>
+                            <constraint firstItem="OFs-Fl-bIK" firstAttribute="trailing" secondItem="bAM-BA-Y1G" secondAttribute="trailing" id="2lA-f6-2W3"/>
+                            <constraint firstItem="OFs-Fl-bIK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AtO-Uw-7SP"/>
+                            <constraint firstItem="OFs-Fl-bIK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Qa5-QV-K4I"/>
+                            <constraint firstItem="bAM-BA-Y1G" firstAttribute="top" secondItem="OFs-Fl-bIK" secondAttribute="bottom" constant="8" symbolic="YES" id="RTR-07-wj0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bAM-BA-Y1G" secondAttribute="bottom" constant="30" id="sZK-pi-kfJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerConstraint" destination="tSd-zK-9h8" id="kRg-Gi-giV"/>
+                        <outlet property="myButton" destination="bAM-BA-Y1G" id="U0b-uk-tUk"/>
+                        <outlet property="myLabel" destination="jmz-wm-Kmv" id="hy6-bU-b38"/>
+                        <outlet property="viewB" destination="OFs-Fl-bIK" id="TM1-TR-BpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
